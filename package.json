@@ -1,0 +1,32 @@
+{
+  "name": "the-realtime-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirWilliamIII/the-realtime-express.git"
+  },
+  "author": "Will Carpenter <willcarpenteriii@gmail.com> (https://willcarpenter.site)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SirWilliamIII/the-realtime-express/issues"
+  },
+  "homepage": "https://github.com/SirWilliamIII/the-realtime-express#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.11.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-loader": "^1.9.0",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "webpack-dev-server": "^2.9.4"
+  }
+}
