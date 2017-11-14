@@ -13,7 +13,6 @@
         "array-element-newline": "off",
         "array-bracket-spacing": "error",
         "array-callback-return": "error",
-        "array-element-newline": "error",
         "arrow-body-style": "off",
         "arrow-parens": [
             "error",
@@ -192,6 +191,7 @@
         "no-ternary": "error",
         "no-throw-literal": "error",
         "no-trailing-spaces": "error",
+        "no-undef": "off",
         "no-undef-init": "error",
         "no-undefined": "error",
         "no-underscore-dangle": "error",
@@ -243,7 +243,7 @@
         "require-jsdoc": "off",
         "rest-spread-spacing": "error",
          "semi": [
-            "error",
+            "off",
             "never"
         ],
         "semi-spacing": "error",

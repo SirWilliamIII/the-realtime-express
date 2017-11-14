@@ -1,6 +1,18 @@
 /* eslint-disable object-curly-newline */
-const path = require('path')
+const path = require('path'),
+	fs = require('fs')
 
+const nodeModules = fs.readdirSync("./node_modules").filter(d => d !== ".bin")
+
+function ignoreModules(context, request, callback) {
+	if(request[0] == '.') {
+		return callback()
+	}
+	const module = request.split('/')[0]
+	if (nodeModules.indexOf(module !== -1)) {
+		return callback(null, 'commonjs' + request)
+	}
+}
 function createConfig(isDebug) {
 	return {
 		target:  "node",
@@ -20,7 +32,8 @@ function createConfig(isDebug) {
 				{ test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ },
 				{ test: /\.js$/, loader: "eslint-loader", exclude: /node_modules/ }
 			]
-		}
+		},
+		externals: [ignoreModules]
 	};
 }
 
